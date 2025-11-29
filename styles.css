@@ -2347,9 +2347,19 @@ input:checked + .slider:before { transform: translateX(20px); }
     font-weight: 600;
     padding: 10px;
     border-radius: 8px;
-    transition: background 0.2s;
+    transition: all 0.2s; /* Changed to 'all' for smoother hover effects */
+    
+    /* ADD THIS LINE: */
+    cursor: pointer; 
 }
-.btn-social:hover { background: #f8fafc; border-color: #cbd5e1; }
+
+/* Optional: Add this for a better hover effect */
+.btn-social:hover { 
+    background: #f8fafc; 
+    border-color: var(--accent);
+    transform: translateY(-2px); /* Moves button up slightly */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Adds a soft shadow */
+}
 .btn-social img { width: 20px; height: 20px; }
 
 /* Divider with Text */
